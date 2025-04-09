@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <title>Car Website</title>
+</head>
+<body>
+    <!--<h1>CAR SHOWROOM</h1>-->
+    <div class="header">
+        <span class="company">N E X A</span>
+        <span class="brand">MARUTI SUZUKI</span>
+    </div>
+            
+
+    <!-- 2 Column Section -->
+    <div class="two-column-section">
+        <div class="column description">
+            <h2 style="text-align: center;">ABOUT US</h2>
+            <p>
+                We are leading authorized dealer of Maruti Suzuki car with multiple showrooms, service stations and across Ahmedabad, We have conveniently located showrooms at Ashram Road, Isanpur and S. G. Highway. We have started with Isanpur in 2001, currently we have total 4 sales outlet including NEXA and 3 Fully equpied Service Stations. Delivering quality service to all our customers and ensuring utmost customer satisfaction have been the founding values of our automotive businesses and we relentlessly strive to maintain these values which make us the best at what we do.Popular Wheelers is a one-stop-shop for Sales, Service, Accessories, Finance and Insurance. We are committed to deliver the best of Maruti Suzuki to you.
+            </p>
+        </div>
+        <div class="column image">
+            <img src="{% static 'images/nexa.jpg' %}" alt="">
+        </div>
+    </div>
+    </div>
+    <!-- 4 Row Image Section -->
+    <div class="image-grid">
+        <div class="service-image">
+            <img src="{% static 'images/service.jpg' %}" alt="">
+        </div>
+        <div class="service-description">
+            <h2 style="text-align: center;">SERVICES</h2>
+            <p>At Popular Wheelers, we offer a complete range of car services to keep your vehicle in top condition. From regular maintenance, oil changes, and brake inspections to advanced diagnostics and repairs, we ensure your car runs smoothly and efficiently. Our expert technicians provide wheel alignment, battery checks, AC servicing, and professional detailing to give your car a fresh look and optimal performance. We use genuine parts and the latest technology to deliver quick, reliable, and high-quality service, ensuring your safety and satisfaction on every drive.</p>
+        </div>
+        <div class="finance-image">
+            <img src="{% static 'images/finance.jpg' %}" alt="">
+        </div>
+        <div class="covers-image">
+            <img src="{% static 'images/covers.jpg' %}" alt="">
+        </div>
+        <div class="Location-image">
+             <h2>Location</h2>
+            <iframe  
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.516531272965!2d72.57447387488763!3d22.58004117949227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f1f3f89ab9%3A0x541d9b751ef9e6eb!2sThaltej%2C%20Ahmedabad%2C%20Gujarat%20380054!5e0!3m2!1sen!2sin!4v1649746898123!5m2!1sen!2sin" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>  
+        <div class="address">
+            <p><h4>Showroom Address:</h4>
+                NEXA SG Highway <br>
+                Kiran Motors Pvt. Ltd. <br>
+                Ground Floor, Venus Benecia,<br>
+                Opposite Rajpath Club, S.G Highway,<br>
+                Bodakdev, Ahmedabad, Gujarat – 380015<br><br>
+
+                <h4>Business Hours</h4> 
+                10:00 AM - 07:00 PM
+                
+                <h4>+918062511166</h4>
+                <a href="{% url 'index' %}" class="view-models-btn">View Models</a>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

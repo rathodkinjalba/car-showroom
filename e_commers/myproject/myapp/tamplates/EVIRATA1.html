@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <title>Car Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 0px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 0;
+        }
+        .card {
+            background-color: #f9fafd;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%; 
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        h1, h2, h3, h4, p {
+            margin: 10px 0;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h2 {
+            color: #555;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        h4 {
+            color: #7c1f0a;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .range {
+            display: flex;
+            align-items: center;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .range i {
+            color: #8b2109;
+            margin-right: 8px;
+            font-size: 22px;
+        }
+        .description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 15px;
+            text-align: justify;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="title">CAR DETAILS</h1>
+<div class="container">
+    <!-- First Card -->
+    <div class="card">
+        <img src="{% static 'images/Evirata1.jpg' %}" alt="Car 1">
+    </div>
+
+    
+    <div class="card">
+        <h1>E VIRATA</h1>
+        <div class="color-variants">
+            
+            <p>NEXA BLUE</p>
+        </div>
+        <h2>Showroom Price</h2>
+        <h4>₹ 9,00,000</h4>
+        <h3 class="range">
+            <i class="fa-solid fa-bolt"></i> Range: 500 km
+        </h3>
+        
+        <p class="description">
+            The E Virata is a cutting-edge electric vehicle designed to deliver exceptional performance and comfort. 
+            With a sleek aerodynamic design and state-of-the-art battery technology, it offers a remarkable range 
+            of 500 km on a single charge. Experience seamless driving with advanced features like adaptive cruise 
+            control, intelligent infotainment system, and premium interiors crafted for luxury. Whether you're 
+            navigating city streets or hitting the open road, the E Virata ensures a smooth and powerful ride.
+        </p>
+    </div>
+</div>
+<form method="POST" action="{% url 'person_form' %}" style="padding: 20px;">
+    {% csrf_token %}
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+        <div style="flex: 1; min-width: 30%;">
+            <label>Name</label><br>
+            <input type="text" name="name" required style="width: 100%;">
+        </div>
+
+        <div style="flex: 1; min-width: 30%;">
+            <label>Email</label><br>
+            <input type="email" name="email"placeholder="Email (optional)"style="width: 100%;">
+        </div>
+
+        <div style="flex: 1; min-width: 30%;">
+            <label>Phone</label><br>
+            <input type="text" name="phone" required style="width: 100%;">
+        </div>
+
+        <div style="flex: 1; min-width: 30%;">
+            <label>City</label><br>
+            <input type="text" name="city" required style="width: 100%;">
+        </div>
+
+        <div style="flex: 1; min-width: 30%;">
+            <label>Car Model</label><br>
+            <input type="text" name="model" required style="width: 100%;">
+        </div>
+        <div style="flex: 1; min-width: 30%;">
+            <label for="color" style="font-size: 13px; font-weight: 500; margin-bottom: 5px; display: inline-block;">Car Color</label><br>
+            <select name="color" id="color" required style="width: 100%; padding: 5px 8px; font-size: 13px; border: 1px solid #bbb; border-radius: 3px; background-color: #fff;">
+                <option value="">Select color</option>
+                <option value="Blue">Blue</option>
+                <option value="Greee">Silver</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Red">Red</option>
+            </select>
+        </div>
+    </div>
+
+    <br><br>
+    <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; border: none; color: white; font-size: 16px; border-radius: 5px;">
+            Submit
+        </button>
+    </div>
+</form>
+
+</body>
+</html>

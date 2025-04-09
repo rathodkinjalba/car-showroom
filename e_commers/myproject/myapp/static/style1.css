@@ -1,0 +1,140 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.company, .brand {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* NEXA ke liye style */
+.company {
+    color: #000;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Suzuki ke liye style */
+.brand {
+    color: #050505;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    margin: 5px 0;
+    color: #2c3e50;
+}
+/* Two Column Section */
+.two-column-section {
+    display: flex;
+    gap: 40px;
+    padding: 35px 5%;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.column {
+    flex: 1;
+}
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+.image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* 4 Row Image Section */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 column grid */
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+.service-image img, .covers-image img, .finance-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-description p {
+    background-color: #f4f9f9;
+    padding: 6px;
+    border-left: 2px;
+    border-radius: 70px;
+    text-align: justify;
+    
+}
+
+.Location-image iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+.address {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Light border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.address h4 {
+    color: #333; /* Dark grey color */
+    margin-bottom: 5px;
+}
+
+.address p {
+    color: #555; /* Medium grey color */
+    font-size: 16px;
+}
+
+.address h4:last-of-type {
+    color: #bb2457; /* Pink color for phone number */
+    font-size: 18px;
+    font-weight: bold;
+}
+.view-models-btn {
+    display: inline-block;
+    background-color: #7f0f34;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.view-models-btn:hover {
+    background-color: #c2185b; /* Darker shade on hover */
+}
+
